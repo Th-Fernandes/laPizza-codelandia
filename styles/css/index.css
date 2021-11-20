@@ -1,0 +1,63 @@
+body .main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50rem;
+  background: url("../../images/header-bg.svg") no-repeat center;
+  background-size: cover;
+}
+body .main-header #basil {
+  position: absolute;
+  top: 45.6rem;
+  left: 0;
+}
+body main {
+  max-width: 144rem;
+  margin: auto;
+}
+body main section#topSellingProducts {
+  margin: 14.1rem auto 0;
+  text-align: center;
+}
+body main section#topSellingProducts > h2 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: 3.1rem;
+}
+body main section#topSellingProducts .pizzas-container {
+  margin: 0 16rem;
+}
+body main section#topSellingProducts .pizzas-container .pizza-content {
+  padding: 0 3.8rem;
+  width: 25.6rem;
+  height: 27.5rem;
+  background-color: #FEF6F4;
+  border-radius: 25px;
+}
+body main section#topSellingProducts .pizzas-container .pizza-content .pizza {
+  position: relative;
+  top: -60px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  min-width: 18.3rem;
+}
+body main section#topSellingProducts .pizzas-container .pizza-content .pizza-description > h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+body main section#topSellingProducts .pizzas-container .pizza-content .pizza-description .pizza-ingredients {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 20px;
+  color: #616161;
+  padding: 0 1rem;
+}
+body main section#topSellingProducts .pizzas-container .pizza-content .pizza-description .pizza-price {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=index.css.map */

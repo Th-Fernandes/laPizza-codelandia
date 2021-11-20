@@ -1,0 +1,91 @@
+// colors
+$red: #CF3031;
+$orange: #FFA200;
+$green:#5C913B ;
+$black: #2E2E2E;
+$gray: #616161;
+$soft-pink: #FFD4C9;
+$white: #FEF6F4;
+
+body {
+  .main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50rem;
+    background: url('../../images/header-bg.svg') no-repeat center;
+    background-size: cover;
+
+
+    #basil {
+      position: absolute;
+      top: 45.6rem;
+      left: 0;
+    }
+  }
+
+  main {
+    max-width: 144rem;
+    margin: auto;
+
+    section#topSellingProducts {
+      margin: 14.1rem auto 0;
+      text-align: center;
+
+      > h2 {
+        font-size: 3.6rem;
+        font-weight: 600;
+        margin-bottom: 3.1rem;
+      }
+
+      .pizzas-container {
+        margin: 0 16rem;
+
+        .pizza-content {
+          padding: 0 3.8rem;
+          width: 25.6rem;
+          height: 27.5rem;
+          background-color: $white;
+          border-radius: 25px;
+
+          .pizza {
+            position: relative;
+            top: -60px;
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+            min-width: 18.3rem;
+
+            .pizza-photo {
+              
+            }
+            
+          }
+
+          .pizza-description {
+            > h3 {
+              font-size: 1.8rem;
+              font-weight: 600;
+              margin-bottom: .8rem;
+            }
+
+            .pizza-ingredients {
+              font-size: 1.4rem;
+              font-weight: 300;
+              line-height: 20px;
+              color: $gray;
+              padding: 0 1rem;
+            }
+
+            .pizza-price {
+              font-size: 3.2rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
