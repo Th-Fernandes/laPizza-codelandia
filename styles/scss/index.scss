@@ -29,41 +29,58 @@ body {
     margin: auto;
 
     section#topSellingProducts {
-      margin: 14.1rem auto 0;
+      margin: 14.1rem auto 20.8rem;
       text-align: center;
 
       > h2 {
         font-size: 3.6rem;
         font-weight: 600;
-        margin-bottom: 3.1rem;
+        margin-bottom: 8.8rem;
+
+        #mashroomBg {
+          position: absolute;
+          top: 587px;
+          left: 1192px;
+        }
       }
 
       .pizzas-container {
+        height: 38rem;
         margin: 0 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow-y: hidden;
+        overflow-x: auto;
 
         .pizza-content {
           padding: 0 3.8rem;
-          width: 25.6rem;
+          max-width: 25.6rem;
           height: 27.5rem;
           background-color: $white;
           border-radius: 25px;
 
+          &:not(:last-child) {
+            margin-right: 3.2rem;
+          }
+
           .pizza {
-            position: relative;
-            top: -60px;
             display: flex;
             justify-content: space-between;
             justify-items: center;
             align-items: center;
-            min-width: 18.3rem;
-
-            .pizza-photo {
-              
-            }
+            min-width: 20rem;
+            margin: -5.5rem 0 1.6rem;
             
+            .ghost-element {
+              visibility: hidden;
+              color: transparent;
+            }
           }
 
           .pizza-description {
+            margin-bottom: 2.4rem;
+
             > h3 {
               font-size: 1.8rem;
               font-weight: 600;
@@ -76,6 +93,7 @@ body {
               line-height: 20px;
               color: $gray;
               padding: 0 1rem;
+              margin-bottom: 2.8rem;
             }
 
             .pizza-price {
@@ -86,6 +104,55 @@ body {
         }
       }
     }
+
+    section#aboutUs {
+      min-height: 60rem;
+      background-color: #fcfcfc;
+      display: flex;
+      align-items: center;
+      margin-left: 16rem;
+
+      .laPizza-photo {
+        width: 44.8rem;
+        height: 50.1rem;
+        background: url('../../images/lapizza-place.svg');
+      }
+
+      .lapizza-history {
+        width: 45.8rem;
+        margin-left: 9.6rem;
+
+        > h2 {
+          font-size: 3.6rem;
+          font-weight: 600;
+          margin-bottom: 2.4rem;
+        }
+
+        > p {
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          color: $black;
+        }
+
+        #learnMore {
+          width: 14.8rem;
+          height: 3.9rem;
+          font-size: 1.6rem;
+          margin-top: 3.6rem;
+        }
+      }
+    }
   }
 
+  footer {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 5rem;
+
+    > p {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

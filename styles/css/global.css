@@ -7,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  --orange: #FFA200;
 }
 
 li {
@@ -16,4 +17,18 @@ li {
 /* > global fonts settings < */
 :root {
   font-family: 'Sora', sans-serif;
+}
+
+/* global buying buttons settings */
+.buy-pizza {
+  width: 15.7rem;
+  height: 3.1rem;
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  border-radius: 2.5rem;
+  font-weight: 600;
+  background-color: var(--orange);
 }
