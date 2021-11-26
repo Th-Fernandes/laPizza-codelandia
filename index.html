@@ -31,7 +31,9 @@
           <div class="pizza">
             <span class="ghost-element">.</span>
             <img src="./images/pizzas/pizza-la-cuma.svg" alt="La cuma" class="pizza-photo">
-            <img class="favorite-button" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            <button class="favorite-button">
+              <img class="favorite" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            </button>
           </div>
 
           <article class="pizza-description">
@@ -55,7 +57,9 @@
           <div class="pizza">
             <span class="ghost-element">.</span>
             <img src="./images/pizzas/pizza-la-menta.svg" alt="La cuma" class="pizza-photo">
-            <img class="favorite-button" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            <button class="favorite-button">
+              <img class="favorite" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            </button>
           </div>
 
           <article class="pizza-description">
@@ -79,7 +83,9 @@
           <div class="pizza">
             <span class="ghost-element">.</span>
             <img src="./images/pizzas/pizza-la-bana.svg" alt="La cuma" class="pizza-photo">
-            <img class="favorite-button" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            <button class="favorite-button">
+              <img class="favorite" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            </button>
           </div>
 
           <article class="pizza-description">
@@ -103,7 +109,9 @@
           <div class="pizza">
             <span class="ghost-element">.</span>
             <img src="./images/pizzas/pizza-la-toca.svg" alt="La cuma" class="pizza-photo">
-            <img class="favorite-button" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            <button class="favorite-button">
+              <img class="favorite" src="./images/pizzas/favorite-pizza.svg" alt="favorite pizza">
+            </button>
           </div>
 
           <article class="pizza-description">
@@ -126,26 +134,72 @@
     </section>
 
     <section id="aboutUs">
-      <div class="laPizza-photo">
-        <img src="" alt="">
+      <div class="aboutUs-container">
+        <div class="laPizza-photo">
+          <img src="" alt="">
+        </div>
+  
+        <article class="lapizza-history">
+          <h2>
+            Sobre a La Pizza
+          </h2>
+  
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis justo sem. Donec consequat, nunc a dapibus dapibus, justo dolor tristique tortor, sit amet tincidunt lorem nisl at ex. Cras dolor purus, varius in euismod pretium, finibus nec mi. Curabitur aliquam pharetra lectus in pharetra. Nullam viverra elementum neque quis fermentum. 
+          </p>
+  
+          <button id="learnMore">Ler mais</button>
+        </article>
       </div>
+    </section>
 
-      <article class="lapizza-history">
-        <h2>
-          Sobre a La Pizza
-        </h2>
+    <section id="buyPhaseModal">
+      <div class="modal-container">
+        <div class="selected-pizza">
+          <h2>La Cuma</h2>
+          <img src="./images/pizzas/pizza-la-cuma.svg" alt="">
+        </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis justo sem. Donec consequat, nunc a dapibus dapibus, justo dolor tristique tortor, sit amet tincidunt lorem nisl at ex. Cras dolor purus, varius in euismod pretium, finibus nec mi. Curabitur aliquam pharetra lectus in pharetra. Nullam viverra elementum neque quis fermentum. 
-        </p>
+        <form  class="order-informations" action="">
+          <ul class="pizza-extras">
+            <li class="pizza-extra">
+              <input type="checkbox" name="catupiry" id="addCatupiry">
+              <label for="addCatupiry">adicionar catupiry</label>      
+            </li>
 
-        <button id="learnMore">Ler mais</button>
-      </article>
+            <li class="pizza-extra">
+              <input type="checkbox" name="mozarela" id="addMozarela">
+              <label for="addMozarela">adicionar queijo</label>
+            </li>
+            
+            <li class="pizza-extra">
+              <input type="checkbox" name="cheddar" id="addCheddar">
+              <label for="addCheddar">adicionar cheddar</label>              
+            </li>
+            <li class="pizza-observation">
+              <label for="">Observações:</label>
+              <input type="text">
+            </li>
+          </ul>
+
+          <div class="user-address">
+            <h2>Onde devemos entregar?</h2>
+            <input id="userAddress" type="text" placeholder="Diga para nós o local de entrega" required>
+           </div>
+
+          <div class="confirm-order">
+              <button id='orderPizza' type="submit">Confirmar pedido</button>
+            </div>
+          </form>
+        
+      </div>
     </section>
   </main>
 
   <footer>
     <p>TODOS OS DIREITOS RESERVADOS</p>
   </footer>
+
+  <script src="./main.js" type="module" ></script>
 </body>
 </html>

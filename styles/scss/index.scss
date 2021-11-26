@@ -25,10 +25,10 @@ body {
   }
 
   main {
-    max-width: 144rem;
-    margin: auto;
 
     section#topSellingProducts {
+      max-width: 144rem;
+      margin: auto;
       margin: 14.1rem auto 20.8rem;
       text-align: center;
 
@@ -46,10 +46,10 @@ body {
 
       .pizzas-container {
         height: 38rem;
-        margin: 0 16rem;
+        margin-left: 16rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        //justify-content: center;
         overflow-y: hidden;
         overflow-x: auto;
 
@@ -75,6 +75,11 @@ body {
             .ghost-element {
               visibility: hidden;
               color: transparent;
+            }
+
+            .favorite-button {
+              border-radius: 0;
+              background-color: transparent;
             }
           }
 
@@ -106,39 +111,147 @@ body {
     }
 
     section#aboutUs {
-      min-height: 60rem;
       background-color: #fcfcfc;
-      display: flex;
-      align-items: center;
-      margin-left: 16rem;
+      width: 100%;
 
-      .laPizza-photo {
-        width: 44.8rem;
-        height: 50.1rem;
-        background: url('../../images/lapizza-place.svg');
+      .aboutUs-container {
+        max-width: 144rem;
+        min-height: 60rem;
+        display: flex;
+        align-items: center;
+        margin-left: 16rem;
+        .laPizza-photo {
+          width: 44.8rem;
+          height: 50.1rem;
+          background: url('../../images/lapizza-place.svg');
+        }
+  
+        .lapizza-history {
+          width: 46rem;
+          margin-left: 9.6rem;
+  
+          > h2 {
+            font-size: 3.6rem;
+            font-weight: 600;
+            margin-bottom: 2.4rem;
+          }
+  
+          > p {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: $black;
+          }
+  
+          #learnMore {
+            width: 14.8rem;
+            height: 3.9rem;
+            font-size: 1.6rem;
+            margin-top: 3.6rem;
+          }
+        }
+      }
+     
+    }
+
+    section#buyPhaseModal {
+      visibility: hidden;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba( $black, $alpha: 0.6);
+
+      &.active {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        visibility: visible;
       }
 
-      .lapizza-history {
-        width: 45.8rem;
-        margin-left: 9.6rem;
+      .modal-container {
 
-        > h2 {
-          font-size: 3.6rem;
-          font-weight: 600;
-          margin-bottom: 2.4rem;
+        background-color: $white;
+        padding: 2.5rem;
+        text-align: center;
+        width: min(100rem, 90%);
+        height: min(50rem, 90%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+
+        .selected-pizza {
+          > h2 {
+            font-size: 3.6rem;
+            margin-bottom: 2rem;
+          }
+
+          > img {
+            width: 28rem;
+            box-shadow: 0 0  15px rgba( $black, $alpha: 0.3);
+            border-radius: 50%;
+          }
         }
 
-        > p {
-          font-size: 1.6rem;
-          line-height: 2.6rem;
-          color: $black;
-        }
+        .order-informations {
+          height: 80%;
+          width: min(50rem, 50%);
+          text-align: start;
+          .pizza-extras {
+            margin-bottom: 3rem;
+            
+            .pizza-extra {
+              display: flex;
+              align-items: center;
+              margin-bottom: 1rem;
+              
 
-        #learnMore {
-          width: 14.8rem;
-          height: 3.9rem;
-          font-size: 1.6rem;
-          margin-top: 3.6rem;
+              > input[type="checkbox"] {
+                margin-right: 1.25rem;
+              }
+
+              > label {
+                font-size: 1.6rem;
+              }
+            }
+
+            .pizza-observation {
+              margin: 2rem 0;
+
+              > label {
+                font-size: 1.6rem;
+              }
+              
+              > input {
+                display: block;
+                height: 5rem;
+                overflow-y: none;
+                margin-top: 1.2rem;
+                width: 50%;
+              }
+            }
+          }
+
+          .user-address {
+            margin-bottom: 3rem;
+
+            > h2 {
+              margin-bottom: 1.2rem;
+            }
+
+            > input {
+              width: 80%;
+            }
+          }
+
+          .confirm-order {
+            margin-top: 5rem;
+            text-align: end;
+            > button {
+              height: 3.5rem;
+              width: 20rem;
+            }
+          }
         }
       }
     }
@@ -153,6 +266,18 @@ body {
     > p {
       width: 100%;
       text-align: center;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  body {
+    main {
+      section#topSellingProducts {
+        .pizzas-container {
+          margin: 0 2rem;
+        }
+      }
     }
   }
 }

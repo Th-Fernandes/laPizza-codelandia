@@ -11,11 +11,9 @@ body .main-header #basil {
   top: 45.6rem;
   left: 0;
 }
-body main {
+body main section#topSellingProducts {
   max-width: 144rem;
   margin: auto;
-}
-body main section#topSellingProducts {
   margin: 14.1rem auto 20.8rem;
   text-align: center;
 }
@@ -31,10 +29,9 @@ body main section#topSellingProducts > h2 #mashroomBg {
 }
 body main section#topSellingProducts .pizzas-container {
   height: 38rem;
-  margin: 0 16rem;
+  margin-left: 16rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -60,6 +57,10 @@ body main section#topSellingProducts .pizzas-container .pizza-content .pizza .gh
   visibility: hidden;
   color: transparent;
 }
+body main section#topSellingProducts .pizzas-container .pizza-content .pizza .favorite-button {
+  border-radius: 0;
+  background-color: transparent;
+}
 body main section#topSellingProducts .pizzas-container .pizza-content .pizza-description {
   margin-bottom: 2.4rem;
 }
@@ -81,36 +82,123 @@ body main section#topSellingProducts .pizzas-container .pizza-content .pizza-des
   font-weight: 600;
 }
 body main section#aboutUs {
-  min-height: 60rem;
   background-color: #fcfcfc;
+  width: 100%;
+}
+body main section#aboutUs .aboutUs-container {
+  max-width: 144rem;
+  min-height: 60rem;
   display: flex;
   align-items: center;
   margin-left: 16rem;
 }
-body main section#aboutUs .laPizza-photo {
+body main section#aboutUs .aboutUs-container .laPizza-photo {
   width: 44.8rem;
   height: 50.1rem;
   background: url("../../images/lapizza-place.svg");
 }
-body main section#aboutUs .lapizza-history {
-  width: 45.8rem;
+body main section#aboutUs .aboutUs-container .lapizza-history {
+  width: 46rem;
   margin-left: 9.6rem;
 }
-body main section#aboutUs .lapizza-history > h2 {
+body main section#aboutUs .aboutUs-container .lapizza-history > h2 {
   font-size: 3.6rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
 }
-body main section#aboutUs .lapizza-history > p {
+body main section#aboutUs .aboutUs-container .lapizza-history > p {
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: #2E2E2E;
 }
-body main section#aboutUs .lapizza-history #learnMore {
+body main section#aboutUs .aboutUs-container .lapizza-history #learnMore {
   width: 14.8rem;
   height: 3.9rem;
   font-size: 1.6rem;
   margin-top: 3.6rem;
+}
+body main section#buyPhaseModal {
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.6);
+}
+body main section#buyPhaseModal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+}
+body main section#buyPhaseModal .modal-container {
+  background-color: #FEF6F4;
+  padding: 2.5rem;
+  text-align: center;
+  width: min(100rem, 90%);
+  height: min(50rem, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+body main section#buyPhaseModal .modal-container .selected-pizza > h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+body main section#buyPhaseModal .modal-container .selected-pizza > img {
+  width: 28rem;
+  box-shadow: 0 0 15px rgba(46, 46, 46, 0.3);
+  border-radius: 50%;
+}
+body main section#buyPhaseModal .modal-container .order-informations {
+  height: 80%;
+  width: min(50rem, 50%);
+  text-align: start;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras {
+  margin-bottom: 3rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-extra {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-extra > input[type=checkbox] {
+  margin-right: 1.25rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-extra > label {
+  font-size: 1.6rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-observation {
+  margin: 2rem 0;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-observation > label {
+  font-size: 1.6rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .pizza-extras .pizza-observation > input {
+  display: block;
+  height: 5rem;
+  overflow-y: none;
+  margin-top: 1.2rem;
+  width: 50%;
+}
+body main section#buyPhaseModal .modal-container .order-informations .user-address {
+  margin-bottom: 3rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .user-address > h2 {
+  margin-bottom: 1.2rem;
+}
+body main section#buyPhaseModal .modal-container .order-informations .user-address > input {
+  width: 80%;
+}
+body main section#buyPhaseModal .modal-container .order-informations .confirm-order {
+  margin-top: 5rem;
+  text-align: end;
+}
+body main section#buyPhaseModal .modal-container .order-informations .confirm-order > button {
+  height: 3.5rem;
+  width: 20rem;
 }
 body footer {
   display: flex;
@@ -121,6 +209,12 @@ body footer {
 body footer > p {
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  body main section#topSellingProducts .pizzas-container {
+    margin: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
